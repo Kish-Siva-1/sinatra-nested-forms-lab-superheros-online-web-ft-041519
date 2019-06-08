@@ -11,7 +11,7 @@ class App < Sinatra::Base
   post '/teams' do 
     binding.pry 
     i=0
-    @team_name = params[:team][:name]
+    @team_name = "" params[:team][:name]
     @team_motto = "Team Motto: " + params[:team][:motto]
     params[:team][:members].each do |name| 
       i+=1
