@@ -18,6 +18,8 @@ class App < Sinatra::Base
       name.each do |x,value|
         instance_variable_set("@#{x}_#{i}", value) 
       end 
-    end 
+    end
+      erb :team 
   end 
+
 end
