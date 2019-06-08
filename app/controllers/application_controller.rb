@@ -16,7 +16,7 @@ class App < Sinatra::Base
     params[:team][:members].each do |name| 
       i+=1
       name.each do |x,value|
-        instance_variable_set("@#{x}_#{i}", value) 
+        instance_variable_set("@#{x}_#{i}", "Hero #{x}"value) 
       end 
     end
       erb :team 
