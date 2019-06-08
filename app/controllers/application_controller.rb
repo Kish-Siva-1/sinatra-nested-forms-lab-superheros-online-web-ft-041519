@@ -10,6 +10,6 @@ class App < Sinatra::Base
   
   post '/teams' do 
     binding.pry 
-    @team_name = params
+    @team_name = params[:team][:name]
   end 
 end
