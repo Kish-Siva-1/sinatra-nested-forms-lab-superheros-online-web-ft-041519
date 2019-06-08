@@ -13,8 +13,6 @@ class App < Sinatra::Base
     i=0
     @team_name = params[:team][:name]
     @team_motto = "Team Motto: " + params[:team][:motto]
-    params[:team][:members].each |x| do 
-      @super_hero_i
-    end 
+    params[:team][:members].each{ |name, value| instance_variable_set("@#{name}_#{i+=1}", value) }
   end 
 end
