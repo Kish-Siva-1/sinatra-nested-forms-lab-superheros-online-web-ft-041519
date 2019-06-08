@@ -10,12 +10,13 @@ class App < Sinatra::Base
   
   post '/teams' do 
     binding.pry 
+    i=0
     @team_name = params[:team][:name]
     @team_motto = "Team Motto: " + params[:team][:motto]
     params[:team][:members].each do |name| 
-      i=1
+      i+=1
       name.each do |x,value|
-        instance_variable_set("@#{x}_#{i+=1}", value) 
+        instance_variable_set("@#{x}_#{i}", value) 
       end 
     end 
   end 
